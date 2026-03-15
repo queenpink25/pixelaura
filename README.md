@@ -69,7 +69,7 @@ Built using:
 
 ## 🌐 Live Site
 
-https://yourusername.github.io/digital-roots-africa
+https://queenpink25.github.io/digital-roots-africa
 
 (Replace with your actual domain when connected.)
 
