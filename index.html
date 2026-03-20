@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Howler • Roar Loud. Launch Fast.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .heading { font-family: 'Space Grotesk', sans-serif; }
+    .hero-bg {
+      background: linear-gradient(135deg, #0A0A0A 0%, #1A0033 50%, #000000 100%);
+    }
+    .neon-purple { text-shadow: 0 0 20px #C026D3, 0 0 40px #C026D3; }
+  </style>
+</head>
+<body class="bg-zinc-950 text-white">
+
+  <!-- NAVBAR -->
+  <nav class="border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-lg fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 bg-gradient-to-br from-violet-500 to-pink-500 rounded-2xl flex items-center justify-center text-2xl">🐺</div>
+        <span class="heading text-3xl font-semibold tracking-tighter">Pixel Howler</span>
+      </div>
+      
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="#templates" class="hover:text-pink-400 transition">Templates</a>
+        <a href="#services" class="hover:text-pink-400 transition">Services</a>
+        <a href="#shop" class="hover:text-pink-400 transition">Shop</a>
+        <a href="#why" class="hover:text-pink-400 transition">Why Us</a>
+      </div>
+      
+      <div class="flex items-center gap-4">
+        <button onclick="window.location='#shop'" 
+                class="px-6 py-2.5 text-sm font-semibold bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 rounded-full transition">
+          Browse All
+        </button>
+        <button onclick="window.location='#contact'" 
+                class="px-6 py-2.5 text-sm font-semibold bg-gradient-to-r from-pink-500 to-violet-500 hover:from-pink-600 hover:to-violet-600 rounded-full transition shadow-lg shadow-pink-500/30">
+          Get Started – $49
+        </button>
+        <button class="md:hidden"><i class="fa-solid fa-bars text-2xl"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-bg min-h-screen flex items-center pt-20">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div class="pt-12">
+        <div class="inline-flex items-center gap-2 bg-zinc-900 border border-zinc-700 rounded-full px-4 py-1 text-xs tracking-widest mb-6">
+          <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+          NEW: WordPress Multisite Packs Dropped 🔥
+        </div>
+        
+        <h1 class="heading text-6xl md:text-7xl leading-none font-bold tracking-tighter">
+          TEMPLATES THAT<br>
+          <span class="neon-purple bg-clip-text text-transparent bg-gradient-to-r from-pink-400 via-violet-400 to-cyan-400">HOWL LOUDER</span>
+        </h1>
+        
+        <p class="mt-6 text-xl text-zinc-400 max-w-lg">
+          Premium landing pages • Portfolios • CVs • E-commerce • Institutional sites • WordPress Multisite setups.<br>
+          Gen-Z sharp. Agency clean. Built to convert.
+        </p>
+        
+        <div class="flex flex-wrap gap-4 mt-8">
+          <a href="#shop" class="px-8 py-4 bg-white text-zinc-950 font-semibold rounded-2xl flex items-center gap-3 hover:scale-105 transition">
+            Shop Templates <span class="text-lg">→</span>
+          </a>
+          <a href="#services" class="px-8 py-4 border border-zinc-700 hover:bg-zinc-800 font-semibold rounded-2xl flex items-center gap-3 transition">
+            Book Multisite Setup
+          </a>
+        </div>
+        
+        <div class="flex items-center gap-8 mt-10 text-sm">
+          <div class="flex -space-x-3">
+            <div class="w-7 h-7 bg-zinc-700 border-2 border-zinc-950 rounded-full overflow-hidden"><img src="https://picsum.photos/32/32?random=1" class="object-cover"></div>
+            <div class="w-7 h-7 bg-zinc-700 border-2 border-zinc-950 rounded-full overflow-hidden"><img src="https://picsum.photos/32/32?random=2" class="object-cover"></div>
+            <div class="w-7 h-7 bg-zinc-700 border-2 border-zinc-950 rounded-full overflow-hidden"><img src="https://picsum.photos/32/32?random=3" class="object-cover"></div>
+          </div>
+          <div>
+            <span class="font-semibold">4.98 • 2,394 creators</span><br>
+            <span class="text-zinc-400">already roaring online</span>
+          </div>
+          <div class="pl-6 border-l border-zinc-700">
+            <i class="fa-solid fa-star text-amber-400"></i>
+            <i class="fa-solid fa-star text-amber-400"></i>
+            <i class="fa-solid fa-star text-amber-400"></i>
+            <i class="fa-solid fa-star text-amber-400"></i>
+            <i class="fa-solid fa-star text-amber-400"></i>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Hero Visual -->
+      <div class="relative">
+        <div class="bg-gradient-to-br from-pink-500/10 to-cyan-500/10 border border-zinc-700 rounded-3xl overflow-hidden shadow-2xl">
+          <img src="https://picsum.photos/id/1015/800/520" alt="Pixel Howler Dashboard Preview" class="w-full rounded-3xl">
+          <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
+          <div class="absolute bottom-6 left-6 bg-zinc-900 border border-zinc-700 rounded-2xl px-5 py-3 flex gap-4 text-xs">
+            <div class="flex items-center gap-1.5">
+              <span class="text-pink-400">📄</span> Landing Kit
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="text-violet-400">💼</span> Portfolio Pro
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="text-cyan-400">🛒</span> Shop Launch
+            </div>
+          </div>
+        </div>
+        
+        <!-- Floating badges -->
+        <div class="absolute -top-4 -right-4 bg-zinc-900 border border-zinc-700 rounded-2xl px-4 py-2 shadow-xl flex items-center gap-2">
+          <span class="text-emerald-400 text-xl">🚀</span>
+          <div>
+            <div class="font-semibold text-sm">Instant Download</div>
+            <div class="text-zinc-400 text-xs">No waiting • Lifetime access</div>
+          </div>
+        </div>
+        
+        <div class="absolute -bottom-6 left-12 bg-zinc-900 border border-zinc-700 rounded-2xl px-5 py-2 flex items-center gap-3 shadow-xl">
+          <i class="fa-solid fa-wordpress text-sky-400 text-3xl"></i>
+          <div class="leading-none">
+            <div class="font-semibold">WordPress Multisite</div>
+            <div class="text-xs text-zinc-400">Setup in 48 hrs • $299</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-10 left-1/2 flex flex-col items-center">
+      <div class="text-zinc-400 text-xs tracking-widest mb-2">SCROLL TO ROAR</div>
+      <i class="fa-solid fa-chevron-down animate-bounce"></i>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="border-y border-zinc-800 py-4 bg-zinc-950">
+    <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center md:justify-between items-center gap-x-12 gap-y-4 text-zinc-400 text-sm">
+      <div>✅ Featured on Product Hunt • Top 3</div>
+      <div>🔥 100% Money-Back Roar Guarantee</div>
+      <div>⭐ Used by creators in 47 countries</div>
+      <div>📍 Kampala • Built for Africa-first speed</div>
+    </div>
+  </div>
+
+  <!-- PRODUCTS / SERVICES -->
+  <section id="shop" class="py-20 bg-zinc-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex justify-between items-end mb-12">
+        <h2 class="heading text-5xl font-bold tracking-tighter">Pick Your Weapon</h2>
+        <a href="#" class="flex items-center gap-2 text-pink-400 hover:text-pink-300 font-medium">See entire pack →</a>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="group bg-zinc-800 border border-zinc-700 hover:border-pink-500 rounded-3xl overflow-hidden transition-all">
+          <div class="h-56 bg-zinc-700 flex items-center justify-center text-6xl">📄</div>
+          <div class="p-6">
+            <h3 class="font-semibold text-xl">Landing Page Templates</h3>
+            <p class="text-zinc-400 text-sm mt-2">SaaS • Agency • Creator • NFT • 12 variants • Figma + Webflow + HTML</p>
+            <div class="flex justify-between items-end mt-6">
+              <div>
+                <span class="text-3xl font-bold">$29</span><span class="line-through text-zinc-500 ml-2">$69</span>
+              </div>
+              <button class="bg-white text-zinc-950 px-6 py-3 rounded-2xl font-semibold group-hover:bg-pink-500 group-hover:text-white transition">Grab Kit</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="group bg-zinc-800 border border-zinc-700 hover:border-violet-500 rounded-3xl overflow-hidden transition-all">
+          <div class="h-56 bg-gradient-to-br from-amber-300 to-pink-400 flex items-center justify-center text-6xl">💼📊</div>
+          <div class="p-6">
+            <h3 class="font-semibold text-xl">Portfolio + CV Mega Pack</h3>
+            <p class="text-zinc-400 text-sm mt-2">Notion • PDF • Framer • 3 languages • ATS-ready</p>
+            <div class="flex justify-between items-end mt-6">
+              <div>
+                <span class="text-3xl font-bold">$39</span>
+              </div>
+              <button class="bg-white text-zinc-950 px-6 py-3 rounded-2xl font-semibold group-hover:bg-violet-500 group-hover:text-white transition">Unlock Career</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="group bg-zinc-800 border border-zinc-700 hover:border-cyan-500 rounded-3xl overflow-hidden transition-all relative">
+          <div class="absolute top-4 right-4 bg-cyan-500 text-zinc-950 text-xs font-bold px-3 py-1 rounded-full">BESTSELLER</div>
+          <div class="h-56 bg-zinc-700 flex items-center justify-center text-6xl">🛍️🏛️</div>
+          <div class="p-6">
+            <h3 class="font-semibold text-xl">E-com + Institutional Sites</h3>
+            <p class="text-zinc-400 text-sm mt-2">Shopify • WordPress • School/Org • Full customisation</p>
+            <div class="flex justify-between items-end mt-6">
+              <div>
+                <span class="text-3xl font-bold">$79</span>
+              </div>
+              <button class="bg-white text-zinc-950 px-6 py-3 rounded-2xl font-semibold group-hover:bg-cyan-500 group-hover:text-white transition">Launch Store</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WordPress Service -->
+      <div class="mt-16 bg-gradient-to-r from-zinc-800 to-zinc-900 border border-zinc-700 rounded-3xl p-8 flex flex-col md:flex-row items-center gap-8">
+        <div class="md:w-2/5">
+          <div class="flex items-center gap-3 text-4xl">
+            <i class="fa-brands fa-wordpress text-sky-400"></i>
+            <span class="heading font-bold text-3xl">Multisite Power Pack</span>
+          </div>
+          <p class="mt-3 text-zinc-400">One dashboard • 10+ sub-sites • Memberships • Courses • Blog • Shop • All synced</p>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li>✅ Setup done for you in 48 hrs</li>
+            <li>✅ Custom domain + SSL + branding</li>
+            <li>✅ Training call included</li>
+          </ul>
+          <button class="mt-6 px-10 py-4 bg-sky-500 hover:bg-sky-600 text-zinc-950 font-bold rounded-2xl">Book Slot • Only 5 left this month ($299)</button>
+        </div>
+        <div class="flex-1 grid grid-cols-3 gap-3 text-center text-xs">
+          <div class="bg-zinc-700 py-6 rounded-2xl">🏫 School Network</div>
+          <div class="bg-zinc-700 py-6 rounded-2xl">🛍️ Franchise Stores</div>
+          <div class="bg-zinc-700 py-6 rounded-2xl">📚 Course Empire</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section id="why" class="py-20">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="heading text-5xl font-bold">Why creators choose Pixel Howler</h2>
+      <div class="grid md:grid-cols-4 gap-8 mt-12">
+        <div>
+          <div class="text-6xl mb-3">⚡</div>
+          <h3 class="font-semibold">Instant Delivery</h3>
+          <p class="text-zinc-400">Download in 8 seconds. Lifetime updates.</p>
+        </div>
+        <div>
+          <div class="text-6xl mb-3">🌍</div>
+          <h3 class="font-semibold">Africa-First Speed</h3>
+          <p class="text-zinc-400">Built in Kampala • Optimized for low bandwidth.</p>
+        </div>
+        <div>
+          <div class="text-6xl mb-3">🔥</div>
+          <h3 class="font-semibold">Conversion Obsessed</h3>
+          <p class="text-zinc-400">Every template tested on 10k+ visitors.</p>
+        </div>
+        <div>
+          <div class="text-6xl mb-3">🧠</div>
+          <h3 class="font-semibold">Gen-Z Sharp • CEO Clean</h3>
+          <p class="text-zinc-400">Trendy visuals that still impress investors.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="bg-gradient-to-r from-pink-600 via-violet-600 to-cyan-500 py-16 text-center">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-4xl font-bold">Ready to make your brand roar?</h2>
+      <p class="mt-3 text-lg">First 50 buyers today get FREE Notion OS + custom color pack worth $97</p>
+      <button onclick="alert('Thank you! 🎉 Redirecting to checkout... (demo)')" 
+              class="mt-8 px-12 py-5 bg-white text-zinc-950 text-xl font-bold rounded-3xl shadow-xl hover:scale-110 transition">
+        YES – I WANT TO ROAR 🔥
+      </button>
+      <p class="text-xs mt-4 opacity-70">Secure checkout • Powered by Stripe • Cancel anytime</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-zinc-950 border-t border-zinc-800 py-12">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-5 gap-8 text-sm">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="text-3xl">🐺</span>
+          <span class="heading text-2xl">Pixel Howler</span>
+        </div>
+        <p class="mt-3 text-zinc-400">Digital products that actually sell.<br>Kampala, Uganda • 🌍 Global</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3">Products</h4>
+        <ul class="space-y-2 text-zinc-400">
+          <li>Landing Templates</li>
+          <li>Portfolio + CV</li>
+          <li>E-commerce Kits</li>
+          <li>Institutional Packs</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3">Services</h4>
+        <ul class="space-y-2 text-zinc-400">
+          <li>WordPress Multisite Setup</li>
+          <li>Custom Design</li>
+          <li>Framer/Webflow Builds</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3">Community</h4>
+        <ul class="space-y-2 text-zinc-400">
+          <li>Discord (join free)</li>
+          <li>Instagram @pixelhowler</li>
+          <li>WhatsApp +256 700 123 456</li>
+        </ul>
+      </div>
+      <div>
+        <button class="w-full py-4 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 rounded-2xl">📧 hello@pixelhowler.com</button>
+        <p class="text-xs text-zinc-400 mt-6">© 2026 Pixel Howler • Made with love in Uganda</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple Tailwind script already included via CDN
+    console.log('%cPixel Howler homepage drafted successfully! 🚀\nCopy the entire code and save as index.html', 'color:#C026D3;font-weight:bold');
+  </script>
+</body>
+</html>
