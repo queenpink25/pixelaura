@@ -149,22 +149,30 @@
     </div>
   </div>
 
- <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Pixel Aura Services</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
-/* Smooth slide toggle */
+/* Slide toggle */
 .slide-down {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease;
 }
 .slide-down.show {
-  max-height: 2000px; /* Large enough to show all content */
+  max-height: 2000px;
+}
+/* Bounce hover for cards */
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(255,255,255,0.2);
+}
+/* Price box small font */
+.price-box {
+  font-size: 0.75rem;
 }
 </style>
 </head>
@@ -176,9 +184,7 @@
       Pixel Aura Services
     </h2>
 
-    <div id="categories" class="space-y-4">
-      <!-- Categories will be rendered here -->
-    </div>
+    <div id="categories" class="space-y-6"></div>
   </div>
 </section>
 
@@ -188,101 +194,99 @@ const serviceCategories = [
   {
     name: "🚀 Launch",
     color: "text-pink-400",
+    buttonText: "Get Early Access",
     services: [
-      {name:"SaaS Landing Page", desc:"Fast-loading, conversion-optimized SaaS template", prices:[{usd:69,ugx:280000},{usd:29,ugx:120000}]},
-      {name:"Agency Landing Page", desc:"Professional template for digital agencies", prices:[{usd:69,ugx:280000},{usd:29,ugx:120000}]},
-      {name:"Creator Launch Page", desc:"Showcase your portfolio & products effectively", prices:[{usd:69,ugx:280000},{usd:29,ugx:120000}]},
-      {name:"Event Registration Page", desc:"Easy-to-use event signup template", prices:[{usd:69,ugx:280000},{usd:29,ugx:120000}]},
-      {name:"Product Launch Page", desc:"Promote products with high-converting pages", prices:[{usd:69,ugx:280000},{usd:29,ugx:120000}]}
+      {name:"SaaS Landing Page", desc:"Fast-loading SaaS template", prices:[{tier:"Starter",usd:29,ugx:120000},{tier:"Premium",usd:69,ugx:280000}]},
+      {name:"Agency Landing Page", desc:"Professional template for agencies", prices:[{tier:"Starter",usd:29,ugx:120000},{tier:"Premium",usd:69,ugx:280000}]},
+      {name:"Creator Launch Page", desc:"Portfolio & product showcase", prices:[{tier:"Starter",usd:29,ugx:120000},{tier:"Premium",usd:69,ugx:280000}]},
+      {name:"Event Registration Page", desc:"Event signup template", prices:[{tier:"Starter",usd:29,ugx:120000},{tier:"Premium",usd:69,ugx:280000}]},
+      {name:"Product Launch Page", desc:"High-converting launch page", prices:[{tier:"Starter",usd:29,ugx:120000},{tier:"Premium",usd:69,ugx:280000}]}
     ]
   },
   {
     name: "🏗 Build",
     color: "text-cyan-400",
+    buttonText: "Get Started",
     services: [
-      {name:"Corporate Website", desc:"Professional website for corporations", prices:[{usd:99,ugx:400000},{usd:79,ugx:320000}]},
-      {name:"NGO Website", desc:"Showcase NGO mission and projects", prices:[{usd:99,ugx:400000},{usd:79,ugx:320000}]},
-      {name:"School / Academy Website", desc:"Institutional websites with schedule & info", prices:[{usd:99,ugx:400000},{usd:79,ugx:320000}]},
-      {name:"E-commerce Store (Shopify/WooCommerce)", desc:"Full-featured online shop", prices:[{usd:199,ugx:800000},{usd:149,ugx:600000}]},
-      {name:"Institutional Sites", desc:"Custom websites for organizations & clubs", prices:[{usd:199,ugx:800000},{usd:149,ugx:600000}]}
+      {name:"Corporate Website", desc:"Professional corporate site", prices:[{tier:"Starter",usd:79,ugx:320000},{tier:"Premium",usd:99,ugx:400000}]},
+      {name:"NGO Website", desc:"Showcase NGO projects", prices:[{tier:"Starter",usd:79,ugx:320000},{tier:"Premium",usd:99,ugx:400000}]},
+      {name:"School / Academy Website", desc:"Institutional websites", prices:[{tier:"Starter",usd:79,ugx:320000},{tier:"Premium",usd:99,ugx:400000}]},
+      {name:"E-commerce Store", desc:"Full-featured shop, starter/premium", prices:[{tier:"Starter",usd:149,ugx:600000},{tier:"Premium",usd:199,ugx:800000}]},
+      {name:"Institutional Sites", desc:"Custom sites for organizations", prices:[{tier:"Starter",usd:149,ugx:600000},{tier:"Premium",usd:199,ugx:800000}]}
     ]
   },
   {
     name: "📈 Elevate",
     color: "text-violet-400",
+    buttonText: "Shop",
     services: [
-      {name:"Portfolio System", desc:"Showcase your work & achievements", prices:[{usd:59,ugx:240000},{usd:39,ugx:160000}]},
-      {name:"ATS-Ready CV Template", desc:"CVs optimized for applicant tracking systems", prices:[{usd:59,ugx:240000},{usd:39,ugx:160000}]},
-      {name:"LinkedIn Optimization", desc:"Profile setup for maximum visibility", prices:[{usd:89,ugx:360000},{usd:69,ugx:280000}]},
-      {name:"Career Mega Pack", desc:"CV + Portfolio + Notion system ready for use", prices:[{usd:99,ugx:400000},{usd:79,ugx:320000}]}
+      {name:"Portfolio System", desc:"Showcase work & achievements", prices:[{tier:"Starter",usd:39,ugx:160000},{tier:"Premium",usd:59,ugx:240000}]},
+      {name:"ATS-Ready CV Template", desc:"Optimized for tracking systems", prices:[{tier:"Starter",usd:39,ugx:160000},{tier:"Premium",usd:59,ugx:240000}]},
+      {name:"LinkedIn Optimization", desc:"Profile setup for visibility", prices:[{tier:"Starter",usd:69,ugx:280000},{tier:"Premium",usd:89,ugx:360000}]},
+      {name:"Career Mega Pack", desc:"CV + Portfolio + Notion", prices:[{tier:"Starter",usd:79,ugx:320000},{tier:"Premium",usd:99,ugx:400000}]}
     ]
   },
   {
     name: "🤖 Automate",
     color: "text-amber-400",
+    buttonText: "Get Started",
     services: [
-      {name:"Email Marketing Setup", desc:"Set up campaigns & sequences", prices:[{usd:149,ugx:600000},{usd:99,ugx:400000}]},
-      {name:"AI Chatbot Integration", desc:"Smart chatbots for your website", prices:[{usd:249,ugx:1000000},{usd:199,ugx:800000}]},
-      {name:"Workflow Automation", desc:"Automate repetitive business tasks", prices:[{usd:449,ugx:1800000},{usd:399,ugx:1600000}]},
-      {name:"SMS Alert Systems", desc:"Automated SMS alerts for businesses", prices:[{usd:199,ugx:800000},{usd:149,ugx:600000}]}
+      {name:"Email Marketing Setup", desc:"Set up campaigns & sequences", prices:[{tier:"Starter",usd:99,ugx:400000},{tier:"Premium",usd:149,ugx:600000}]},
+      {name:"AI Chatbot Integration", desc:"Smart chatbots for websites", prices:[{tier:"Starter",usd:199,ugx:800000},{tier:"Premium",usd:249,ugx:1000000}]},
+      {name:"Workflow Automation", desc:"Automate business tasks", prices:[{tier:"Starter",usd:399,ugx:1600000},{tier:"Premium",usd:449,ugx:1800000}]},
+      {name:"SMS Alert Systems", desc:"Automated alerts for businesses", prices:[{tier:"Starter",usd:149,ugx:600000},{tier:"Premium",usd:199,ugx:800000}]}
     ]
   },
   {
     name: "💎 Digital Products",
     color: "text-emerald-400",
+    buttonText: "Shop",
     services: [
-      {name:"Website Template", desc:"Editable website template for any business", prices:[{usd:29,ugx:120000},{usd:19,ugx:80000}]},
-      {name:"Landing Page Kit", desc:"Prebuilt landing page systems", prices:[{usd:29,ugx:120000},{usd:19,ugx:80000}]},
-      {name:"Pitch Deck Template", desc:"Investor-ready presentations", prices:[{usd:59,ugx:240000},{usd:49,ugx:200000}]},
-      {name:"Notion Productivity Kit", desc:"Templates for students & professionals", prices:[{usd:19,ugx:80000},{usd:9,ugx:40000}]}
-    ]
-  },
-  {
-    name: "🏢 SME Growth Systems (Launching Soon)",
-    color: "text-orange-400",
-    services: [
-      {name:"SME Website Starter Pack", desc:"Starter websites for small businesses", prices:[{usd:199,ugx:800000},{usd:149,ugx:600000}]},
-      {name:"SME E-commerce Launch Kit", desc:"Launch your online store quickly", prices:[{usd:399,ugx:1600000},{usd:299,ugx:1200000}]},
-      {name:"SME Marketing Automation", desc:"Email + SMS + workflow automations", prices:[{usd:449,ugx:1800000},{usd:399,ugx:1600000}]},
-      {name:"SME Portfolio System", desc:"Portfolio + CV + showcase pack", prices:[{usd:99,ugx:400000},{usd:79,ugx:320000}]}
+      {name:"Website Template", desc:"Editable template, starter/premium", prices:[{tier:"Starter",usd:19,ugx:80000},{tier:"Premium",usd:29,ugx:120000}]},
+      {name:"Landing Page Kit", desc:"Prebuilt landing page kit", prices:[{tier:"Starter",usd:19,ugx:80000},{tier:"Premium",usd:29,ugx:120000}]},
+      {name:"Pitch Deck Template", desc:"Investor-ready deck", prices:[{tier:"Starter",usd:49,ugx:200000},{tier:"Premium",usd:59,ugx:240000}]},
+      {name:"Notion Productivity Kit", desc:"Templates for students/professionals", prices:[{tier:"Starter",usd:9,ugx:40000},{tier:"Premium",usd:19,ugx:80000}]}
     ]
   }
 ];
 
-// ---------------- RENDER CATEGORIES ----------------
+// ---------------- RENDER ----------------
 const categoriesContainer = document.getElementById("categories");
 
 serviceCategories.forEach(cat => {
   const catDiv = document.createElement("div");
   catDiv.className = "bg-zinc-800 rounded-3xl border border-zinc-700";
 
-  // Category button
+  // Category toggle
   const btn = document.createElement("button");
   btn.className = `w-full text-left px-6 py-4 text-2xl font-bold ${cat.color} hover:bg-zinc-700 transition flex justify-between items-center`;
   btn.innerHTML = `${cat.name} <span class="text-xl">+</span>`;
 
-  // Services container
   const servicesDiv = document.createElement("div");
   servicesDiv.className = "slide-down px-6 py-4 space-y-4";
 
-  // Toggle animation
   btn.onclick = () => servicesDiv.classList.toggle("show");
 
+  // Render each service
   cat.services.forEach(svc => {
     const svcDiv = document.createElement("div");
-    svcDiv.className = "bg-zinc-900 p-4 rounded-2xl";
+    svcDiv.className = "service-card bg-zinc-900 p-4 rounded-2xl";
 
     svcDiv.innerHTML = `
       <h4 class="text-xl font-semibold">${svc.name}</h4>
-      <p class="text-zinc-400">${svc.desc}</p>
+      <p class="text-zinc-400 mt-1">${svc.desc}</p>
       <div class="flex gap-2 mt-2 flex-wrap">
         ${svc.prices.map(p => `
-          <div class="bg-zinc-800 px-3 py-2 rounded-xl text-center">
-            <span class="line-through text-xs block">$${p.usd*2} / UGX ${p.ugx*2}</span>
+          <div class="price-box bg-zinc-800 px-3 py-2 rounded-xl text-center">
+            <span class="block">${p.tier}</span>
+            <span class="line-through block">$${p.usd*2} / UGX ${p.ugx*2}</span>
             <span class="font-bold block">$${p.usd} / UGX ${p.ugx}</span>
           </div>
         `).join('')}
       </div>
+      <button class="mt-4 bg-pink-500 hover:bg-pink-400 text-zinc-900 font-bold px-6 py-2 rounded-2xl transition">
+        ${cat.buttonText}
+      </button>
     `;
 
     servicesDiv.appendChild(svcDiv);
@@ -293,7 +297,6 @@ serviceCategories.forEach(cat => {
   categoriesContainer.appendChild(catDiv);
 });
 </script>
-
 
 
       <!-- WordPress Service -->
