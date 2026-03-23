@@ -10,23 +10,19 @@ document.querySelector('.slide-form .close-btn').addEventListener('click', () =>
   document.getElementById('sideForm').classList.remove('active');
 });
 
-
-  let count = 0;
+let count = 0;
   let target = 394;
-  let speed = 10; // smaller = faster
-
   let counter = document.getElementById("creatorCount");
 
-  let updateCount = setInterval(() => {
-    if (count < target) {
-      count++;
-      counter.textContent = count;
-    } else {
-      clearInterval(updateCount);
-    }
-  }, speed);
+  function updateCount() {
+    count++;
+    if (count > target) count = 0; // reset after reaching target
+    counter.textContent = count;
+    setTimeout(updateCount, 50); // adjust speed (smaller = faster)
+  }
 
-<script>
+  updateCount();
+
   // Select all Get Started buttons
   const getStartedButtons = document.querySelectorAll('.get-started-btn');
   const sideForm = document.getElementById('sideForm');
