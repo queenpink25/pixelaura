@@ -1,0 +1,60 @@
+/* Side form container */
+.slide-form {
+  position: fixed;
+  right: -320px; /* hidden offscreen */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  border-radius: 8px;
+  transition: right 0.4s ease;
+  z-index: 9999;
+  font-family: sans-serif;
+}
+
+/* Slide-in active state */
+.slide-form.active {
+  right: 20px;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Form elements */
+.slide-form h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #111;
+}
+
+.slide-form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.slide-form button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff; /* change to your brand color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.slide-form button:hover {
+  background: #0056b3;
+}
