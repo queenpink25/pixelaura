@@ -101,7 +101,7 @@
   font-weight: 600;
   cursor: pointer;
   animation: floatDance 3s ease-in-out infinite;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 25px rgba(15,23,42,1);
 }
 
 @keyframes floatDance {
