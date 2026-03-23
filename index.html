@@ -149,153 +149,265 @@
     </div>
   </div>
 
-  <!-- PIXEL AURA SERVICES FULL STRUCTURE -->
+  <!-- PIXEL AURA FULL SERVICES DF-STYLE – USD + UGX -->
 <section id="services" class="py-24 bg-zinc-900 text-white">
   <div class="max-w-7xl mx-auto px-6">
-
     <h2 class="text-5xl font-bold tracking-tighter mb-16 text-center">
       Pixel Aura Services
     </h2>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
 
-      <!-- 🚀 LAUNCH -->
-      <div class="bg-zinc-800 p-8 rounded-3xl border border-zinc-700 hover:border-pink-500 transition">
-        <h3 class="text-2xl font-semibold mb-4">🚀 Launch</h3>
-        <p class="text-zinc-400 mb-6">
-          Fast, strategic digital entry for startups, creators & founders.
-        </p>
-        <ul class="text-sm text-zinc-300 space-y-2 mb-6">
-          <li>• SaaS Landing Pages</li>
-          <li>• Agency Landing Pages</li>
-          <li>• Creator Launch Pages</li>
-          <li>• Event Registration Pages</li>
-          <li>• Product Launch Pages</li>
-          <li>• Portfolio Landing Pages</li>
-          <li>• Startup Website Kits</li>
-          <li>• Figma + Webflow + HTML Templates</li>
-        </ul>
-        <a href="https://queenpink25githubiopixelaura.vendblue.store/" target="_blank"
-           class="inline-block bg-white text-zinc-950 px-6 py-3 rounded-2xl font-semibold hover:bg-pink-500 hover:text-white transition">
-          Explore Launch Kits
-        </a>
-      </div>
+      <!-- ---------------- LAUNCH CATEGORY ---------------- -->
+      <h3 class="col-span-full text-3xl font-bold text-pink-400 mb-6">🚀 Launch – Landing Pages & Templates</h3>
 
-      <!-- 🏗 BUILD -->
-      <div class="bg-zinc-800 p-8 rounded-3xl border border-zinc-700 hover:border-cyan-500 transition">
-        <h3 class="text-2xl font-semibold mb-4">🏗 Build</h3>
-        <p class="text-zinc-400 mb-6">
-          Full digital infrastructure engineered for growth.
-        </p>
-        <ul class="text-sm text-zinc-300 space-y-2 mb-6">
-          <li>• Corporate Websites</li>
-          <li>• NGO Websites</li>
-          <li>• Personal Portfolio Sites</li>
-          <li>• School & Academy Websites</li>
-          <li>• Church Websites</li>
-          <li>• E-commerce Stores (Shopify / WooCommerce)</li>
-          <li>• Institutional Platforms</li>
-          <li>• WordPress Multisite Setup</li>
-          <li>• Subdomain & User Role Configuration</li>
-          <li>• Hosting + Domain Setup</li>
-        </ul>
-        <button class="bg-white text-zinc-950 px-6 py-3 rounded-2xl font-semibold hover:bg-cyan-500 hover:text-white transition">
-          Build My Platform
-        </button>
-      </div>
+      <script>
+        const launchServices = [
+          {name:"SaaS Landing Page", desc:"Fast-loading, conversion-optimized SaaS template"},
+          {name:"Agency Landing Page", desc:"Professional template for digital agencies"},
+          {name:"Creator Launch Page", desc:"Showcase your portfolio & products effectively"},
+          {name:"Event Registration Page", desc:"Easy-to-use event signup template"},
+          {name:"Product Launch Page", desc:"Promote products with high-converting pages"},
+          {name:"Portfolio Landing Page", desc:"Elegant portfolio page for creators & freelancers"},
+          {name:"Startup Website Kit", desc:"Complete startup-ready website template"},
+          {name:"Figma / Webflow / HTML Template", desc:"Editable & customizable multi-platform template"}
+        ];
+        launchServices.forEach(s=>{
+          document.write(`
+          <div class="bg-zinc-800 p-6 rounded-3xl border border-zinc-700 hover:border-pink-500 transition">
+            <h4 class="text-xl font-semibold mb-2">${s.name}</h4>
+            <p class="text-zinc-400 mb-4">${s.desc}</p>
+            <div class="flex gap-2 mb-4">
+              <div class="bg-zinc-900 px-4 py-2 rounded-2xl text-center">
+                <span class="text-zinc-400 line-through text-xs block">$69 / UGX 280,000</span>
+                <span class="text-2xl font-bold block">$29 / UGX 120,000</span>
+                <span class="text-xs text-zinc-400 block">Starter</span>
+              </div>
+              <div class="bg-zinc-900 px-4 py-2 rounded-2xl text-center">
+                <span class="text-zinc-400 line-through text-xs block">$99 / UGX 400,000</span>
+                <span class="text-2xl font-bold block">$49 / UGX 200,000</span>
+                <span class="text-xs text-zinc-400 block">Pro</span>
+              </div>
+              <div class="bg-zinc-900 px-4 py-2 rounded-2xl text-center">
+                <span class="text-zinc-400 line-through text-xs block">$129 / UGX 520,000</span>
+                <span class="text-2xl font-bold block">$79 / UGX 320,000</span>
+                <span class="text-xs text-zinc-400 block">Premium</span>
+              </div>
+            </div>
+            <a href="#" class="inline-block bg-pink-400 text-zinc-950 px-4 py-2 rounded-2xl font-semibold hover:bg-pink-500 hover:text-white transition">Grab ${s.name}</a>
+          </div>
+          `);
+        });
+      </script>
 
-      <!-- 📈 ELEVATE -->
-      <div class="bg-zinc-800 p-8 rounded-3xl border border-zinc-700 hover:border-violet-500 transition">
-        <h3 class="text-2xl font-semibold mb-4">📈 Elevate</h3>
-        <p class="text-zinc-400 mb-6">
-          Position yourself as authority in the digital space.
-        </p>
-        <ul class="text-sm text-zinc-300 space-y-2 mb-6">
-          <li>• Portfolio Systems</li>
-          <li>• ATS-Ready CV Templates</li>
-          <li>• Portfolio + CV Mega Pack</li>
-          <li>• LinkedIn Optimization</li>
-          <li>• GitHub Profile Setup</li>
-          <li>• Bio Writing & Brand Positioning</li>
-          <li>• Personal Brand Strategy</li>
-          <li>• Speaker / Founder Profile Setup</li>
-        </ul>
-        <button class="bg-white text-zinc-950 px-6 py-3 rounded-2xl font-semibold hover:bg-violet-500 hover:text-white transition">
-          Elevate My Brand
-        </button>
-      </div>
+      <!-- ---------------- BUILD CATEGORY ---------------- -->
+      <h3 class="col-span-full text-3xl font-bold text-cyan-400 mt-12 mb-6">🏗 Build – Websites & Platforms</h3>
 
-      <!-- 🤖 AUTOMATE -->
-      <div class="bg-zinc-800 p-8 rounded-3xl border border-zinc-700 hover:border-amber-400 transition">
-        <h3 class="text-2xl font-semibold mb-4">🤖 Automate</h3>
-        <p class="text-zinc-400 mb-6">
-          Smart systems that run your business automatically.
-        </p>
-        <ul class="text-sm text-zinc-300 space-y-2 mb-6">
-          <li>• Email Marketing Setup</li>
-          <li>• Email Sequence Automation</li>
-          <li>• AI Chatbot Integration</li>
-          <li>• AI Content System Setup</li>
-          <li>• Workflow Automation</li>
-          <li>• Lead Capture Systems</li>
-          <li>• CRM Integration</li>
-          <li>• Payment Gateway Integration</li>
-          <li>• WooCommerce Configuration</li>
-          <li>• Forms + Automation Setup</li>
-        </ul>
-        <button class="bg-white text-zinc-950 px-6 py-3 rounded-2xl font-semibold hover:bg-amber-400 hover:text-white transition">
-          Automate My Business
-        </button>
-      </div>
+      <script>
+        const buildServices = [
+          {name:"Corporate Website", desc:"Professional website for corporations"},
+          {name:"NGO Website", desc:"Showcase NGO mission and projects"},
+          {name:"Personal Portfolio Site", desc:"Showcase your work & skills"},
+          {name:"School / Academy Website", desc:"Institutional websites with schedule & info"},
+          {name:"Church Website", desc:"Community and event pages for churches"},
+          {name:"E-commerce Store (Shopify / WooCommerce)", desc:"Full-featured online shop"},
+          {name:"Institutional Platform", desc:"Organizational systems with multiple roles"},
+          {name:"WordPress Multisite Setup", desc:"Manage multiple sites under one dashboard"},
+          {name:"Subdomain & Role Configuration", desc:"Assign users and permissions easily"},
+          {name:"Hosting + Domain Setup", desc:"Website deployment ready"}
+        ];
+        buildServices.forEach(s=>{
+          document.write(`
+          <div class="bg-zinc-800 p-6 rounded-3xl border border-zinc-700 hover:border-cyan-500 transition">
+            <h4 class="text-xl font-semibold mb-2">${s.name}</h4>
+            <p class="text-zinc-400 mb-4">${s.desc}</p>
+            <div class="flex gap-2 mb-4">
+              <div class="bg-zinc-900 px-4 py-2 rounded-2xl text-center">
+                <span class="text-zinc-400 line-through text-xs block">$99 / UGX 400,000</span>
+                <span class="text-2xl font-bold block">$79 / UGX 320,000</span>
+                <span class="text-xs text-zinc-400 block">Starter</span>
+              </div>
+              <div class="bg-zinc-900 px-4 py-2 rounded-2xl text-center">
+                <span class="text-zinc-400 line-through text-xs block">$199 / UGX 800,000</span>
+                <span class="text-2xl font-bold block">$149 / UGX 600,000</span>
+                <span class="text-xs text-zinc-400 block">Pro</span>
+              </div>
+              <div class="bg-zinc-900 px-4 py-2 rounded-2xl text-center">
+                <span class="text-zinc-400 line-through text-xs block">$399 / UGX 1,600,000</span>
+                <span class="text-2xl font-bold block">$299 / UGX 1,200,000</span>
+                <span class="text-xs text-zinc-400 block">Premium</span>
+              </div>
+            </div>
+            <a href="#" class="inline-block bg-cyan-400 text-zinc-950 px-4 py-2 rounded-2xl font-semibold hover:bg-cyan-500 hover:text-white transition">Build ${s.name}</a>
+          </div>
+          `);
+        });
+      </script>
 
-      <!-- 💎 DIGITAL PRODUCTS -->
-      <div class="bg-zinc-800 p-8 rounded-3xl border border-zinc-700 hover:border-emerald-400 transition">
-        <h3 class="text-2xl font-semibold mb-4">💎 Digital Products</h3>
-        <p class="text-zinc-400 mb-6">
-          High-quality downloadable systems for creators & founders.
-        </p>
-        <ul class="text-sm text-zinc-300 space-y-2 mb-6">
-          <li>• Website Templates</li>
-          <li>• Landing Page Kits</li>
-          <li>• Pitch Deck Templates</li>
-          <li>• Startup Launch Kits</li>
-          <li>• UI Kits</li>
-          <li>• Notion Productivity Dashboards</li>
-          <li>• Content Creation Systems</li>
-          <li>• Website Wireframes</li>
-          <li>• Editable CV Templates</li>
-        </ul>
-        <a href="https://queenpink25githubiopixelaura.vendblue.store/" target="_blank"
-           class="inline-block bg-white text-zinc-950 px-6 py-3 rounded-2xl font-semibold hover:bg-emerald-400 hover:text-white transition">
-          Shop Digital Products
-        </a>
-      </div>
+      <!-- ---------------- ELEVATE CATEGORY ---------------- -->
+      <h3 class="col-span-full text-3xl font-bold text-violet-400 mt-12 mb-6">📈 Elevate – Portfolio & Branding</h3>
 
-    </div>
+      <script>
+        const elevateServices = [
+          {name:"Portfolio System", desc:"Showcase your work & achievements"},
+          {name:"ATS-Ready CV Template", desc:"CVs optimized for applicant tracking systems"},
+          {name:"Portfolio + CV Mega Pack", desc:"Complete career kit"},
+          {name:"LinkedIn Optimization", desc:"Profile setup for maximum visibility"},
+          {name:"GitHub Profile Setup", desc:"Professional coding portfolio"},
+          {name:"Bio Writing & Brand Positioning", desc:"Craft your professional story"},
+          {name:"Personal Brand Strategy", desc:"Plan your growth & personal brand"},
+          {name:"Speaker / Founder Profile Setup", desc:"Present yourself professionally online"}
+        ];
+        elevateServices.forEach(s=>{
+          document.write(`
+          <div class="bg-zinc-800 p-6 rounded-3xl border border-zinc-700 hover:border-violet-500 transition">
+            <h4 class="text-xl font-semibold mb-2">${s.name}</h4>
+            <p class="text-zinc-400 mb-4">${s.desc}</p>
+            <div class="flex gap-2 mb-4">
+              <div class="bg-zinc-900 px-4 py-2 rounded-2xl text-center">
+                <span class="text-zinc-400 line-through text-xs block">$59 / UGX 240,000</span>
+                <span class="text-2xl font-bold block">$39 / UGX 160,000</span>
+                <span class="text-xs text-zinc-400 block">Starter</span>
+              </div>
+              <div class="bg-zinc-900 px-4 py-2 rounded-2xl text-center">
+                <span class="text-zinc-400 line-through text-xs block">$89 / UGX 360,000</span>
+                <span class="text-2xl font-bold block">$69 / UGX 280,000</span>
+                <span class="text-xs text-zinc-400 block">Pro</span>
+              </div>
+              <div class="bg-zinc-900 px-4 py-2 rounded-2xl text-center">
+                <span class="text-zinc-400 line-through text-xs block">$119 / UGX 480,000</span>
+                <span class="text-2xl font-bold block">$99 / UGX 400,000</span>
+                <span class="text-xs text-zinc-400 block">Premium</span>
+              </div>
+            </div>
+            <a href="#" class="inline-block bg-violet-400 text-zinc-950 px-4 py-2 rounded-2xl font-semibold hover:bg-violet-500 hover:text-white transition">Elevate ${s.name}</a>
+          </div>
+          `);
+        });
+      </script>
 
-    <div class="bg-zinc-800 p-8 rounded-3xl border border-zinc-700 hover:border-orange-500 transition relative">
-  <div class="absolute top-4 right-4 bg-orange-500 text-zinc-950 text-xs font-bold px-3 py-1 rounded-full">
-    LAUNCHING SOON
-  </div>
+      <!-- ---------------- AUTOMATE CATEGORY ---------------- -->
+      <h3 class="col-span-full text-3xl font-bold text-amber-400 mt-12 mb-6">🤖 Automate – Workflows & AI</h3>
 
-  <h3 class="text-2xl font-semibold mb-4">🏢 SME Growth Systems</h3>
-  <p class="text-zinc-400 mb-6">
-    Structured digital systems designed specifically for small & medium enterprises.
-  </p>
+      <script>
+        const automateServices = [
+          {name:"Email Marketing Setup", desc:"Set up campaigns & sequences"},
+          {name:"Email Sequence Automation", desc:"Automated follow-up emails"},
+          {name:"AI Chatbot Integration", desc:"Smart chatbots for your website"},
+          {name:"AI Content System Setup", desc:"Content automation & AI tools"},
+          {name:"Workflow Automation", desc:"Automate repetitive business tasks"},
+          {name:"Lead Capture Systems", desc:"Generate & manage leads"},
+          {name:"CRM Integration", desc:"Connect with customer management tools"},
+          {name:"Payment Gateway Integration", desc:"Secure payments setup"},
+          {name:"WooCommerce Configuration", desc:"Advanced shop setup"},
+          {name:"Forms + Automation Setup", desc:"Connect forms to workflows & CRM"}
+        ];
+        automateServices.forEach(s=>{
+          document.write(`
+          <div class="bg-zinc-800 p-6 rounded-3xl border border-zinc-700 hover:border-amber-400 transition">
+            <h4 class="text-xl font-semibold mb-2">${s.name}</h4>
+            <p class="text-zinc-400 mb-4">${s.desc}</p>
+            <div class="flex gap-2 mb-4">
+              <div class="bg-zinc-900 px-4 py-2 rounded-2xl text-center">
+                <span class="text-zinc-400 line-through text-xs block">$149 / UGX 600,000</span>
+                <span class="text-2xl font-bold block">$99 / UGX 400,000</span>
+                <span class="text-xs text-zinc-400 block">Starter</span>
+              </div>
+              <div class="bg-zinc-900 px-4 py-2 rounded-2xl text-center">
+                <span class="text-zinc-400 line-through text-xs block">$249 / UGX 1,000,000</span>
+                <span class="text-2xl font-bold block">$199 / UGX 800,000</span>
+                <span class="text-xs text-zinc-400 block">Pro</span>
+              </div>
+              <div class="bg-zinc-900 px-4 py-2 rounded-2xl text-center">
+                <span class="text-zinc-400 line-through text-xs block">$449 / UGX 1,800,000</span>
+                <span class="text-2xl font-bold block">$399 / UGX 1,600,000</span>
+                <span class="text-xs text-zinc-400 block">Premium</span>
+              </div>
+            </div>
+            <a href="#" class="inline-block bg-amber-400 text-zinc-950 px-4 py-2 rounded-2xl font-semibold hover:bg-amber-500 hover:text-white transition">Automate ${s.name}</a>
+          </div>
+          `);
+        });
+      </script>
 
-  <ul class="text-sm text-zinc-300 space-y-2 mb-6">
-    <li>• SME Website Starter Pack</li>
-    <li>• SME E-commerce Launch Kit</li>
-    <li>• Branding + Domain Setup</li>
-    <li>• Automation Essentials</li>
-    <li>• Multisite Franchise System</li>
-  </ul>
+      <!-- ---------------- DIGITAL PRODUCTS ---------------- -->
+      <h3 class="col-span-full text-3xl font-bold text-emerald-400 mt-12 mb-6">💎 Digital Products</h3>
 
-  <button class="bg-white text-zinc-950 px-6 py-3 rounded-2xl font-semibold hover:bg-orange-500 hover:text-white transition">
-    Join Early Access
-  </button>
-</div>
-  </div>
+      <script>
+        const digitalServices = [
+          {name:"Website Template", desc:"Editable website template for any business"},
+          {name:"Landing Page Kit", desc:"Prebuilt landing page systems"},
+          {name:"Pitch Deck Template", desc:"Investor-ready presentations"},
+          {name:"Startup Launch Kit", desc:"Complete kit for startup launches"},
+          {name:"UI Kit", desc:"Design assets & components for apps"},
+          {name:"Notion Productivity Dashboard", desc:"Organize work & life efficiently"},
+          {name:"Content Creation System", desc:"Templates & systems for content creators"},
+          {name:"Website Wireframe", desc:"Plan & structure your websites"},
+          {name:"Editable CV Template", desc:"Professional CV ready for ATS"}
+        ];
+        digitalServices.forEach(s=>{
+          document.write(`
+          <div class="bg-zinc-800 p-6 rounded-3xl border border-zinc-700 hover:border-emerald-400 transition">
+            <h4 class="text-xl font-semibold mb-2">${s.name}</h4>
+            <p class="text-zinc-400 mb-4">${s.desc}</p>
+            <div class="flex gap-2 mb-4">
+              <div class="bg-zinc-900 px-4 py-2 rounded-2xl text-center">
+                <span class="text-zinc-400 line-through text-xs block">$29 / UGX 120,000</span>
+                <span class="text-2xl font-bold block">$19 / UGX 80,000</span>
+                <span class="text-xs text-zinc-400 block">Starter</span>
+              </div>
+              <div class="bg-zinc-900 px-4 py-2 rounded-2xl text-center">
+                <span class="text-zinc-400 line-through text-xs block">$59 / UGX 240,000</span>
+                <span class="text-2xl font-bold block">$49 / UGX 200,000</span>
+                <span class="text-xs text-zinc-400 block">Pro</span>
+              </div>
+              <div class="bg-zinc-900 px-4 py-2 rounded-2xl text-center">
+                <span class="text-zinc-400 line-through text-xs block">$99 / UGX 400,000</span>
+                <span class="text-2xl font-bold block">$79 / UGX 320,000</span>
+                <span class="text-xs text-zinc-400 block">Premium</span>
+              </div>
+            </div>
+            <a href="#" class="inline-block bg-emerald-400 text-zinc-950 px-4 py-2 rounded-2xl font-semibold hover:bg-emerald-500 hover:text-white transition">Get ${s.name}</a>
+          </div>
+          `);
+        });
+      </script>
+
+      <!-- ---------------- SME GROWTH SYSTEMS ---------------- -->
+      <h3 class="col-span-full text-3xl font-bold text-orange-400 mt-12 mb-6">🏢 SME Growth Systems – Launching Soon</h3>
+
+      <script>
+        const smeServices = [
+          {name:"SME Website Starter Pack", desc:"Starter websites for small businesses"},
+          {name:"SME E-commerce Launch Kit", desc:"Launch your online store quickly"},
+          {name:"Branding + Domain Setup", desc:"Get a professional brand & domain"},
+          {name:"Automation Essentials", desc:"Automate your basic workflows"},
+          {name:"Multisite Franchise System", desc:"Manage multiple branches easily"}
+        ];
+        smeServices.forEach(s=>{
+          document.write(`
+          <div class="bg-zinc-800 p-6 rounded-3xl border border-zinc-700 hover:border-orange-500 transition relative">
+            <div class="absolute top-4 right-4 bg-orange-500 text-zinc-950 text-xs font-bold px-2 py-1 rounded-full">LAUNCHING SOON</div>
+            <h4 class="text-xl font-semibold mb-2">${s.name}</h4>
+            <p class="text-zinc-400 mb-4">${s.desc}</p>
+            <div class="flex gap-2 mb-4">
+              <div class="bg-zinc-900 px-4 py-2 rounded-2xl text-center">
+                <span class="text-zinc-400 line-through text-xs block">$199 / UGX 800,000</span>
+                <span class="text-2xl font-bold block">$149 / UGX 600,000</span>
+                <span class="text-xs text-zinc-400 block">Starter</span>
+              </div>
+              <div class="bg-zinc-900 px-4 py-2 rounded-2xl text-center">
+                <span class="text-zinc-400 line-through text-xs block">$399 / UGX 1,600,000</span>
+                <span class="text-2xl font-bold block">$299 / UGX 1,200,000</span>
+                <span class="text-xs text-zinc-400 block">Pro</span>
+              </div>
+              <div class="bg-zinc-900 px-4 py-2 rounded-2xl text-center">
+                <span class="text-zinc-400 line-through text-xs block">$699 / UGX 2,800,000</span>
+                <span class="text-2xl font-bold block">$499 / UGX 2,000,000</span>
+                <span class="text-xs text-zinc-400 block">Premium</span>
+              </div>
+            </div>
+            <a href="#" class="inline-block bg-orange-400 text-zinc-950 px-4 py-2 rounded-2xl font-semibold hover:bg-orange-500 hover:text-white transition">Join Early Access</a
 </section>
 
       <!-- WordPress Service -->
