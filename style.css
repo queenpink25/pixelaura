@@ -88,3 +88,26 @@
     transform: translateX(-50%);
   }
 }
+
+
+.newsletter-dance {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #ff0055;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  animation: floatDance 3s ease-in-out infinite;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+@keyframes floatDance {
+  0% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-8px) rotate(-2deg); }
+  50% { transform: translateY(0px) rotate(2deg); }
+  75% { transform: translateY(-5px) rotate(-1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
