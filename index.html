@@ -6,6 +6,7 @@
   <title>Pixel Aura • Roar Loud. Launch Fast.</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap');
     body { font-family: 'Inter', sans-serif; }
@@ -101,7 +102,7 @@
       <!-- Hero Visual -->
       <div class="relative">
         <div class="bg-gradient-to-br from-pink-500/10 to-cyan-500/10 border border-zinc-700 rounded-3xl overflow-hidden shadow-2xl">
-          <img src="https://picsum.photos/id/1015/800/520" alt="Pixel Howler Dashboard Preview" class="w-full rounded-3xl">
+          <img src="https://picsum.photos/id/1015/800/520" alt="Pixel Aura Dashboard Preview" class="w-full rounded-3xl">
           <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
           <div class="absolute bottom-6 left-6 bg-zinc-900 border border-zinc-700 rounded-2xl px-5 py-3 flex gap-4 text-xs">
             <div class="flex items-center gap-1.5">
@@ -153,10 +154,20 @@
   <!-- TRUST BAR -->
   <div class="border-y border-zinc-800 py-4 bg-zinc-950">
     <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center md:justify-between items-center gap-x-12 gap-y-4 text-zinc-400 text-sm">
-      <div>✅ Featured on Product Hunt • Top 3</div>
-      <div>🔥 100% Money-Back Roar Guarantee</div>
-      <div>⭐ Used by creators in 6 countries</div>
-      <div>📍 Kampala • Built for Africa-first speed</div>
+     <div class="ticker">
+  <div class="ticker-track">
+    <div>✅ Featured on Product Hunt • Top 3</div>
+    <div>🔥 100% Money-Back Roar Guarantee</div>
+    <div>⭐ Used by creators in 6 countries</div>
+    <div>📍 Kampala • Built for Africa-first speed</div>
+
+    <!-- Duplicate for smooth infinite scroll -->
+    <div>✅ Featured on Product Hunt • Top 3</div>
+    <div>🔥 100% Money-Back Roar Guarantee</div>
+    <div>⭐ Used by creators in 6 countries</div>
+    <div>📍 Kampala • Built for Africa-first speed</div>
+  </div>
+</div>
     </div>
   </div>
 
