@@ -28,15 +28,92 @@
   }
 }
 
-
-/* Small newsletter form container */
+/* Small Clean Slide Form */
 .slide-form-small {
   position: fixed;
-  right: 10px; /* closer to edge */
+  right: 0;
   top: 50%;
+  transform: translate(100%, -50%); /* hidden */
+  width: 220px; /* SMALL */
+  background: #ffffff;
+  padding: 18px 14px;
+  border-radius: 16px 0 0 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  transition: transform 0.35s ease;
+  font-family: 'Inter', sans-serif;
+  z-index: 1000;
+}
+
+/* Visible state */
+.slide-form-small.active {
+  transform: translate(0, -50%);
+}
+
+/* Title */
+.slide-form-small h3 {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #0f172a;
+  text-align: center;
+}
+
+/* Input */
+.slide-form-small input {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-size: 0.8rem;
+  outline: none;
+}
+
+.slide-form-small input:focus {
+  border-color: #ff0055;
+}
+
+/* Button */
+.newsletter-btn-small {
+  width: 100%;
+  padding: 8px 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(to right, #ff0055, #ff6f3c);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.newsletter-btn-small:hover {
+  transform: translateY(-1px);
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #94a3b8;
+}
+
+.close-btn:hover {
+  color: #ff0055;
+}
+
+
+/* Small newsletter form container */
+/*.slide-form-small {
+  position: fixed;
+  right: 10px; /* closer to edge */
+ /* top: 50%;
   transform: translateY(-50%);
   width: 250px; /* compact width */
-  background-color: rgba(249, 249, 249, 0.95);
+/*  background-color: rgba(249, 249, 249, 0.95);
   padding: 20px 15px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   border-radius: 20px 0 0 20px;
@@ -44,17 +121,17 @@
   font-family: 'Inter', sans-serif;
   text-align: center;
 }
-
+*/
 /* Heading */
-.slide-form-small h3 {
+/*.slide-form-small h3 {
   font-size: 1.1rem;
   margin-bottom: 15px;
   color: #0f172a; /* Midnight Blue */
-  font-weight: 600;
-}
+/*  font-weight: 600;
+}*/
 
 /* Input field */
-.slide-form-small input[type="email"] {
+/*.slide-form-small input[type="email"] {
   width: 100%;
   padding: 10px 12px;
   margin-bottom: 12px;
@@ -67,9 +144,9 @@
 .slide-form-small input[type="email"]:focus {
   border-color: #ff0055; /* Electric Pink focus */
 }
-
+*/
 /* Subscribe button */
-.newsletter-btn-small {
+/*.newsletter-btn-small {
   width: 100%;
   padding: 10px 0;
   font-size: 0.875rem;
@@ -87,10 +164,10 @@
   background: linear-gradient(to right, #ff3366, #ff7f50);
   box-shadow: 0 12px 25px rgba(255,111,60,0.35);
   transform: translateY(-1px);
-}
+}*/
 
 /* Close button */
-.slide-form-small .close-btn {
+/*.slide-form-small .close-btn {
   position: absolute;
   top: 8px;
   right: 10px;
@@ -102,4 +179,5 @@
 
 .slide-form-small .close-btn:hover {
   color: #ff0055;
-}
+} */
+
