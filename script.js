@@ -25,4 +25,29 @@ document.querySelector('.slide-form .close-btn').addEventListener('click', () =>
       clearInterval(updateCount);
     }
   }, speed);
+
+<script>
+  // Select all Get Started buttons
+  const getStartedButtons = document.querySelectorAll('.get-started-btn');
+  const sideForm = document.getElementById('sideForm');
+
+  getStartedButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Scroll the form into view
+      sideForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      // Optional: add a little "bounce" animation to grab attention
+      sideForm.style.transform = 'translateY(-50%) scale(1.05)';
+      setTimeout(() => {
+        sideForm.style.transform = 'translateY(-50%) scale(1)';
+      }, 300);
+    });
+  });
+
+  // Close button functionality
+  const closeBtn = document.querySelector('.close-btn');
+  closeBtn.addEventListener('click', () => {
+    sideForm.style.display = 'none';
+  });
+</script>
 </script>
