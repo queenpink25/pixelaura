@@ -1,133 +1,74 @@
-/* Form container */
-.slide-form {
+/* Small newsletter form container */
+.slide-form-small {
   position: fixed;
-  right: 0;
+  right: 10px; /* closer to edge */
   top: 50%;
   transform: translateY(-50%);
-  width: 320px;
-  background-color: rgba(249, 249, 249, 0.95); /* Soft White, slightly transparent */
-  padding: 30px 20px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Shadow Black */
+  width: 250px; /* compact width */
+  background-color: rgba(249, 249, 249, 0.95);
+  padding: 20px 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   border-radius: 20px 0 0 20px;
   z-index: 1000;
-  transition: transform 0.3s ease;
   font-family: 'Inter', sans-serif;
-}
-
-.slide-form h3 {
-  margin-bottom: 20px;
-  font-size: 1.25rem;
-  color: #0f172a; /* Midnight Blue */
-  font-weight: 700;
   text-align: center;
 }
 
-/* Input field */
-.slide-form input[type="email"] {
-  width: 100%;
-  padding: 12px 15px;
+/* Heading */
+.slide-form-small h3 {
+  font-size: 1.1rem;
   margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  font-size: 0.95rem;
-  color: #0f172a; /* Midnight Blue text */
-  outline: none;
-  transition: border 0.2s ease;
+  color: #0f172a; /* Midnight Blue */
+  font-weight: 600;
 }
 
-.slide-form input[type="email"]:focus {
+/* Input field */
+.slide-form-small input[type="email"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  outline: none;
+}
+
+.slide-form-small input[type="email"]:focus {
   border-color: #ff0055; /* Electric Pink focus */
 }
 
-/* Subscribe button (gradient) */
-.newsletter-btn {
+/* Subscribe button */
+.newsletter-btn-small {
   width: 100%;
-  padding: 14px 0;
-  font-size: 0.9rem;
+  padding: 10px 0;
+  font-size: 0.875rem;
   font-weight: 600;
   color: white;
-  background: linear-gradient(to right, #ff0055, #ff6f3c); /* Electric Pink → Lava Orange */
+  background: linear-gradient(to right, #ff0055, #ff6f3c);
   border-radius: 9999px;
-  box-shadow: 0 10px 25px rgba(255, 0, 85, 0.3);
-  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(255,0,85,0.25);
   cursor: pointer;
   border: none;
+  transition: all 0.3s ease;
 }
 
-.newsletter-btn:hover {
+.newsletter-btn-small:hover {
   background: linear-gradient(to right, #ff3366, #ff7f50);
-  box-shadow: 0 15px 30px rgba(255, 111, 60, 0.4);
-  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(255,111,60,0.35);
+  transform: translateY(-1px);
 }
 
 /* Close button */
-.close-btn {
+.slide-form-small .close-btn {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 1.5rem;
-  color: #0f172a; /* Midnight Blue */
+  top: 8px;
+  right: 10px;
+  font-size: 1.3rem;
+  color: #0f172a;
   cursor: pointer;
   transition: color 0.2s ease;
 }
 
-.close-btn:hover {
-  color: #ff0055; /* Electric Pink on hover */
-}
-
-/* Ticker / scrolling text */
-.ticker {
-  width: 100%;
-  overflow: hidden;
-  background: #0f172a; /* Midnight Blue */
-  color: white;
-  padding: 12px 0;
-}
-
-.ticker-track {
-  display: flex;
-  gap: 50px;
-  width: max-content;
-  animation: scroll 20s linear infinite;
-}
-
-.ticker-track div {
-  white-space: nowrap;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-@keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-/* Floating "dancing" newsletter button */
-.newsletter-dance {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background: linear-gradient(to right, #ff0055, #ff6f3c); /* Gradient match */
-  color: white;
-  padding: 14px 24px;
-  border-radius: 30px;
-  font-weight: 600;
-  cursor: pointer;
-  animation: floatDance 3s ease-in-out infinite;
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.5); /* Midnight Blue shadow */
-  border: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.newsletter-dance:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(255, 111, 60, 0.4); /* Hover shadow Lava Orange */
-}
-
-@keyframes floatDance {
-  0% { transform: translateY(0px) rotate(0deg); }
-  25% { transform: translateY(-8px) rotate(-2deg); }
-  50% { transform: translateY(0px) rotate(2deg); }
-  75% { transform: translateY(-5px) rotate(-1deg); }
-  100% { transform: translateY(0px) rotate(0deg); }
+.slide-form-small .close-btn:hover {
+  color: #ff0055;
 }
