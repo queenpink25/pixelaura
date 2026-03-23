@@ -24,14 +24,16 @@
     <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
       <div class="flex items-center gap-3">
         <div class="w-9 h-9 bg-gradient-to-br from-violet-500 to-pink-500 rounded-2xl flex items-center justify-center text-2xl">🐺</div>
-        <span class="heading text-3xl font-semibold tracking-tighter">Pixel Howler</span>
+        <span class="heading text-3xl font-semibold tracking-tighter">Pixel Aura</span>
       </div>
       
       <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-        <a href="#templates" class="hover:text-pink-400 transition">Templates</a>
+        
+        <a href="#why" class="hover:text-pink-400 transition">Why Us</a>
         <a href="#services" class="hover:text-pink-400 transition">Services</a>
         <a href="https://queenpink25githubiopixelaura.vendblue.store/" class="hover:text-pink-400 transition">Shop</a>
-        <a href="#why" class="hover:text-pink-400 transition">Why Us</a>
+        <a href="#templates" class="hover:text-pink-400 transition">Blog</a>
+        
       </div>
       
       <div class="flex items-center gap-4">
@@ -41,7 +43,7 @@
         </button>
         <button onclick="window.location='#contact'" 
                 class="px-6 py-2.5 text-sm font-semibold bg-gradient-to-r from-pink-500 to-violet-500 hover:from-pink-600 hover:to-violet-600 rounded-full transition shadow-lg shadow-pink-500/30">
-          Get Started – $49
+          Get Started – $16/60,800 UGX
         </button>
         <button class="md:hidden"><i class="fa-solid fa-bars text-2xl"></i></button>
       </div>
@@ -64,7 +66,7 @@
         
         <p class="mt-6 text-xl text-zinc-400 max-w-lg">
           Premium landing pages • Portfolios • CVs • E-commerce • Institutional sites • WordPress Multisite setups.<br>
-          Gen-Z sharp. Agency clean. Built to convert.
+         Next Gen Redefined. Agency clean. Built to convert.
         </p>
         
         <div class="flex flex-wrap gap-4 mt-8">
@@ -84,7 +86,7 @@
           </div>
           <div>
             <span class="font-semibold">4.98 • 394 creators</span><br>
-            <span class="text-zinc-400">already roaring online</span>
+            <span class="text-zinc-400">Already Vibe Online</span>
           </div>
           <div class="pl-6 border-l border-zinc-700">
             <i class="fa-solid fa-star text-amber-400"></i>
@@ -127,15 +129,23 @@
           <i class="fa-solid fa-wordpress text-sky-400 text-3xl"></i>
           <div class="leading-none">
             <div class="font-semibold">WordPress Multisite</div>
-            <div class="text-xs text-zinc-400">Setup in 48 hrs • $299</div>
+            <div class="text-xs text-zinc-400">Setup in 48 hrs • $299 / 1,136,200 UGX </div>
           </div>
         </div>
       </div>
     </div>
-    
+    <!-- Side Newsletter Form -->
+<div id="sideForm" class="slide-form">
+  <h3>Join Our Newsletter</h3>
+  <form action=https://formspree.io/f/xqeyjwlv>
+    <input type="email" name="email" placeholder="Enter your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+  <span class="close-btn">&times;</span>
+</div>
     <!-- Scroll indicator -->
     <div class="absolute bottom-10 left-1/2 flex flex-col items-center">
-      <div class="text-zinc-400 text-xs tracking-widest mb-2">SCROLL TO ROAR</div>
+      <div class="text-zinc-400 text-xs tracking-widest mb-2">Unleash Your Aura</div>
       <i class="fa-solid fa-chevron-down animate-bounce"></i>
     </div>
   </section>
@@ -219,7 +229,7 @@ const serviceCategories = [
   {
     name: "📈 Elevate",
     color: "text-violet-400",
-    buttonText: "Shop",
+    buttonText: "Get Started",
     services: [
       {name:"Portfolio System", desc:"Showcase work & achievements", prices:[{tier:"Starter",usd:39,ugx:160000},{tier:"Premium",usd:59,ugx:240000}]},
       {name:"ATS-Ready CV Template", desc:"Optimized for tracking systems", prices:[{tier:"Starter",usd:39,ugx:160000},{tier:"Premium",usd:59,ugx:240000}]},
@@ -243,6 +253,7 @@ const serviceCategories = [
     color: "text-emerald-400",
     buttonText: "Shop",
     services: [
+      {name:"Portfolio  Template", desc:"Editable template, starter/premium", prices:[{tier:"Starter",usd:19,ugx:80000},{tier:"Premium",usd:29,ugx:1200000}]},
       {name:"Website Template", desc:"Editable template, starter/premium", prices:[{tier:"Starter",usd:19,ugx:80000},{tier:"Premium",usd:29,ugx:120000}]},
       {name:"Landing Page Kit", desc:"Prebuilt landing page kit", prices:[{tier:"Starter",usd:19,ugx:80000},{tier:"Premium",usd:29,ugx:120000}]},
       {name:"Pitch Deck Template", desc:"Investor-ready deck", prices:[{tier:"Starter",usd:49,ugx:200000},{tier:"Premium",usd:59,ugx:240000}]},
@@ -327,7 +338,7 @@ serviceCategories.forEach(cat => {
   <!-- WHY US -->
   <section id="why" class="py-20">
     <div class="max-w-7xl mx-auto px-6 text-center">
-      <h2 class="heading text-5xl font-bold">Why creators choose Pixel Howler</h2>
+      <h2 class="heading text-5xl font-bold">Why creators choose Pixel Aura</h2>
       <div class="grid md:grid-cols-4 gap-8 mt-12">
         <div>
           <div class="text-6xl mb-3">⚡</div>
@@ -346,7 +357,7 @@ serviceCategories.forEach(cat => {
         </div>
         <div>
           <div class="text-6xl mb-3">🧠</div>
-          <h3 class="font-semibold">Gen-Z Sharp • CEO Clean</h3>
+          <h3 class="font-semibold">NextGen Sharp • CEO Clean</h3>
           <p class="text-zinc-400">Trendy visuals that still impress investors.</p>
         </div>
       </div>
@@ -356,13 +367,13 @@ serviceCategories.forEach(cat => {
   <!-- FINAL CTA -->
   <section class="bg-gradient-to-r from-pink-600 via-violet-600 to-cyan-500 py-16 text-center">
     <div class="max-w-3xl mx-auto px-6">
-      <h2 class="text-4xl font-bold">Ready to make your brand roar?</h2>
-      <p class="mt-3 text-lg">First 50 buyers today get FREE Notion OS + custom color pack worth $97</p>
+      <h2 class="text-4xl font-bold">Ready Own the spotlight online?</h2>
+      <p class="mt-3 text-lg">FREE $29 / 120,000ugx  Custom Personal Portfolio for the first 20 — hurry!</p>
       <button onclick="alert('Thank you! 🎉 Redirecting to checkout... (demo)')" 
               class="mt-8 px-12 py-5 bg-white text-zinc-950 text-xl font-bold rounded-3xl shadow-xl hover:scale-110 transition">
         YES – I WANT TO ROAR 🔥
       </button>
-      <p class="text-xs mt-4 opacity-70">Secure checkout • Powered by Vendblue• Cancel anytime</p>
+      <p class="text-xs mt-4 opacity-70">Secure checkout • Powered by Stripe• Cancel anytime</p>
     </div>
   </section>
 
@@ -372,7 +383,7 @@ serviceCategories.forEach(cat => {
       <div>
         <div class="flex items-center gap-2">
           <span class="text-3xl">🐺</span>
-          <span class="heading text-2xl">Pixel Howler</span>
+          <span class="heading text-2xl">Pixel Aura</span>
         </div>
         <p class="mt-3 text-zinc-400">Digital products that actually sell.<br>Kampala, Uganda • 🌍 Global</p>
       </div>
@@ -397,20 +408,21 @@ serviceCategories.forEach(cat => {
         <h4 class="font-semibold mb-3">Community</h4>
         <ul class="space-y-2 text-zinc-400">
           <li>Discord (join free)</li>
-          <li>Instagram @pixelhowler</li>
-          <li>WhatsApp +256 700 123 456</li>
+          <li>Instagram @pixelaura</li>
+          <li>WhatsApp +256 705 184 054</li>
+          <li>Tiktok +256 705 184 054</li>
         </ul>
       </div>
       <div>
         <button class="w-full py-4 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 rounded-2xl">📧 hello@pixelhowler.com</button>
-        <p class="text-xs text-zinc-400 mt-6">© 2026 Pixel Howler • Made with love in Uganda</p>
+        <p class="text-xs text-zinc-400 mt-6">© 2026 Pixel Aura • Made with love & Purpose in Uganda</p>
       </div>
     </div>
   </footer>
 
   <script>
     // Simple Tailwind script already included via CDN
-    console.log('%cPixel Howler homepage drafted successfully! 🚀\nCopy the entire code and save as index.html', 'color:#C026D3;font-weight:bold');
+    console.log('%cPixel Aura homepage drafted successfully! 🚀\nCopy the entire code and save as index.html', 'color:#C026D3;font-weight:bold');
   </script>
 </body>
 </html>
