@@ -147,71 +147,125 @@
   </section>
 
   <!-- TRUST BAR -->
-  <div class="border-y border-zinc-800 py-4 bg-zinc-950">
-    <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center md:justify-between items-center gap-x-12 gap-y-4 text-zinc-400 text-sm">
-     <div class="ticker">
-  <div class="ticker-track">
-    <div>✅ Featured on Product Hunt • Top 3</div>
-    <div>🔥 100% Money-Back Roar Guarantee</div>
-    <div>⭐ Used by creators in 6 countries</div>
-    <div>📍 Kampala • Built for Africa-first speed</div>
-
-    <!-- Duplicate for smooth infinite scroll -->
-    <div>✅ Featured on Product Hunt • Top 3</div>
-    <div>🔥 100% Money-Back Roar Guarantee</div>
-    <div>⭐ Used by creators in 6 countries</div>
-    <div>📍 Kampala • Built for Africa-first speed</div>
-  </div>
-</div>
- </div>
-</div>
-
-<!-- Side Newsletter Form -->
-<div class="newsletter-dance"> 
-<div id="sideForm" class="slide-form"> 
-<div id="sideForm" class="slide-form"> 
-  <h3>Join Our Newsletter</h3>
-  <form action="https://formspree.io/f/xqeyjwlv" method="POST">
-    <input type="email" name="email" placeholder="Enter your email" required>
-    <button type="submit" class="newsletter-btn">Subscribe</button>
-  </form>
-  <span class="close-btn">&times;</span>
-</div> 
-</div>
-
-</div>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pixel Aura Services</title>
 <script src="https://cdn.tailwindcss.com"></script>
+
 <style>
-/* Slide toggle */
+
+/* ===== TICKER ANIMATION ===== */
+.ticker {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.ticker-track {
+  display: inline-flex;
+  gap: 4rem;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ===== ACCORDION ===== */
 .slide-down {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease;
 }
+
 .slide-down.show {
   max-height: 2000px;
 }
-/* Bounce hover for cards */
+
+/* ===== SERVICE CARD HOVER ===== */
 .service-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .service-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(255,255,255,0.2);
+  box-shadow: 0 8px 20px rgba(255,255,255,0.08);
 }
-/* Price box small font */
+
 .price-box {
   font-size: 0.75rem;
 }
+
 </style>
 </head>
+
 <body class="bg-zinc-900 text-white">
 
-<section id="services" class="py-24">,m
+<!-- ================= TRUST BAR ================= -->
+<div class="border-y border-zinc-800 py-4 bg-zinc-950">
+  <div class="max-w-7xl mx-auto px-6 text-zinc-400 text-sm text-center">
+    <div class="ticker">
+      <div class="ticker-track">
+        <div>✅ Featured on Product Hunt • Top 3</div>
+        <div>🔥 100% Money-Back Roar Guarantee</div>
+        <div>⭐ Used by creators in 6 countries</div>
+        <div>📍 Kampala • Built for Africa-first speed</div>
+
+        <!-- Duplicate for smooth scroll -->
+        <div>✅ Featured on Product Hunt • Top 3</div>
+        <div>🔥 100% Money-Back Roar Guarantee</div>
+        <div>⭐ Used by creators in 6 countries</div>
+        <div>📍 Kampala • Built for Africa-first speed</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= NEWSLETTER ================= -->
+<section class="py-16 bg-zinc-900">
+  <div class="max-w-xl mx-auto px-6">
+    <div class="bg-zinc-800 border border-zinc-700 rounded-3xl p-8 text-center shadow-lg">
+
+      <h3 class="text-2xl font-bold mb-3 text-pink-400">
+        Join Pixel Aura Newsletter
+      </h3>
+
+      <p class="text-zinc-400 text-sm mb-6">
+        Exclusive drops. Early access. Digital glow.
+      </p>
+
+      <form action="https://formspree.io/f/xqeyjwlv" method="POST"
+        class="flex flex-col sm:flex-row gap-3 justify-center">
+
+        <input 
+          type="email" 
+          name="email" 
+          placeholder="Enter your email"
+          required
+          class="flex-1 px-4 py-2 rounded-xl bg-zinc-900 border border-zinc-700 text-white focus:outline-none focus:border-pink-400"
+        >
+
+        <button 
+          type="submit"
+          class="bg-pink-500 hover:bg-pink-400 text-zinc-900 font-bold px-6 py-2 rounded-xl transition"
+        >
+          Subscribe
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services" class="py-24 bg-zinc-900">
   <div class="max-w-7xl mx-auto px-6">
     <h2 class="text-5xl font-bold tracking-tighter mb-16 text-center">
-      
       Pixel Aura Services
     </h2>
 
@@ -220,6 +274,7 @@
 </section>
 
 <script>
+
 // ---------------- SERVICE DATA ----------------
 const serviceCategories = [
   {
@@ -228,10 +283,7 @@ const serviceCategories = [
     buttonText: "Get Early Access",
     services: [
       {name:"SaaS Landing Page", desc:"Fast-loading SaaS template", prices:[{tier:"Starter",usd:29,ugx:120000},{tier:"Premium",usd:69,ugx:280000}]},
-      {name:"Agency Landing Page", desc:"Professional template for agencies", prices:[{tier:"Starter",usd:29,ugx:120000},{tier:"Premium",usd:69,ugx:280000}]},
-      {name:"Creator Launch Page", desc:"Portfolio & product showcase", prices:[{tier:"Starter",usd:29,ugx:120000},{tier:"Premium",usd:69,ugx:280000}]},
-      {name:"Event Registration Page", desc:"Event signup template", prices:[{tier:"Starter",usd:29,ugx:120000},{tier:"Premium",usd:69,ugx:280000}]},
-      {name:"Product Launch Page", desc:"High-converting launch page", prices:[{tier:"Starter",usd:29,ugx:120000},{tier:"Premium",usd:69,ugx:280000}]}
+      {name:"Agency Landing Page", desc:"Professional template", prices:[{tier:"Starter",usd:29,ugx:120000},{tier:"Premium",usd:69,ugx:280000}]}
     ]
   },
   {
@@ -239,11 +291,7 @@ const serviceCategories = [
     color: "text-cyan-400",
     buttonText: "Get Started",
     services: [
-      {name:"Corporate Website", desc:"Professional corporate site", prices:[{tier:"Starter",usd:79,ugx:320000},{tier:"Premium",usd:99,ugx:400000}]},
-      {name:"NGO Website", desc:"Showcase NGO projects", prices:[{tier:"Starter",usd:79,ugx:320000},{tier:"Premium",usd:99,ugx:400000}]},
-      {name:"School / Academy Website", desc:"Institutional websites", prices:[{tier:"Starter",usd:79,ugx:320000},{tier:"Premium",usd:99,ugx:400000}]},
-      {name:"E-commerce Store", desc:"Full-featured shop, starter/premium", prices:[{tier:"Starter",usd:149,ugx:600000},{tier:"Premium",usd:199,ugx:800000}]},
-      {name:"Institutional Sites", desc:"Custom sites for organizations", prices:[{tier:"Starter",usd:149,ugx:600000},{tier:"Premium",usd:199,ugx:800000}]}
+      {name:"Corporate Website", desc:"Professional corporate site", prices:[{tier:"Starter",usd:79,ugx:320000},{tier:"Premium",usd:99,ugx:400000}]}
     ]
   },
   {
@@ -251,10 +299,7 @@ const serviceCategories = [
     color: "text-violet-400",
     buttonText: "Get Started",
     services: [
-      {name:"Portfolio System", desc:"Showcase work & achievements", prices:[{tier:"Starter",usd:39,ugx:160000},{tier:"Premium",usd:59,ugx:240000}]},
-      {name:"ATS-Ready CV Template", desc:"Optimized for tracking systems", prices:[{tier:"Starter",usd:39,ugx:160000},{tier:"Premium",usd:59,ugx:240000}]},
-      {name:"LinkedIn Optimization", desc:"Profile setup for visibility", prices:[{tier:"Starter",usd:69,ugx:280000},{tier:"Premium",usd:89,ugx:360000}]},
-      {name:"Career Mega Pack", desc:"CV + Portfolio + Notion", prices:[{tier:"Starter",usd:79,ugx:320000},{tier:"Premium",usd:99,ugx:400000}]}
+      {name:"Portfolio System", desc:"Showcase achievements", prices:[{tier:"Starter",usd:39,ugx:160000},{tier:"Premium",usd:59,ugx:240000}]}
     ]
   },
   {
@@ -262,22 +307,7 @@ const serviceCategories = [
     color: "text-amber-400",
     buttonText: "Get Started",
     services: [
-      {name:"Email Marketing Setup", desc:"Set up campaigns & sequences", prices:[{tier:"Starter",usd:99,ugx:400000},{tier:"Premium",usd:149,ugx:600000}]},
-      {name:"AI Chatbot Integration", desc:"Smart chatbots for websites", prices:[{tier:"Starter",usd:199,ugx:800000},{tier:"Premium",usd:249,ugx:1000000}]},
-      {name:"Workflow Automation", desc:"Automate business tasks", prices:[{tier:"Starter",usd:399,ugx:1600000},{tier:"Premium",usd:449,ugx:1800000}]},
-      {name:"SMS Alert Systems", desc:"Automated alerts for businesses", prices:[{tier:"Starter",usd:149,ugx:600000},{tier:"Premium",usd:199,ugx:800000}]}
-    ]
-  },
-  {
-    name: "💎 Digital Products",
-    color: "text-emerald-400",
-    buttonText: "Shop",
-    services: [
-      {name:"Portfolio  Template", desc:"Editable template, starter/premium", prices:[{tier:"Starter",usd:19,ugx:80000},{tier:"Premium",usd:29,ugx:1200000}]},
-      {name:"Website Template", desc:"Editable template, starter/premium", prices:[{tier:"Starter",usd:19,ugx:80000},{tier:"Premium",usd:29,ugx:120000}]},
-      {name:"Landing Page Kit", desc:"Prebuilt landing page kit", prices:[{tier:"Starter",usd:19,ugx:80000},{tier:"Premium",usd:29,ugx:120000}]},
-      {name:"Pitch Deck Template", desc:"Investor-ready deck", prices:[{tier:"Starter",usd:49,ugx:200000},{tier:"Premium",usd:59,ugx:240000}]},
-      {name:"Notion Productivity Kit", desc:"Templates for students/professionals", prices:[{tier:"Starter",usd:9,ugx:40000},{tier:"Premium",usd:19,ugx:80000}]}
+      {name:"Email Marketing Setup", desc:"Campaign automation", prices:[{tier:"Starter",usd:99,ugx:400000},{tier:"Premium",usd:149,ugx:600000}]}
     ]
   }
 ];
@@ -286,20 +316,24 @@ const serviceCategories = [
 const categoriesContainer = document.getElementById("categories");
 
 serviceCategories.forEach(cat => {
-  const catDiv = document.createElement("div");
-  catDiv.className = "bg-zinc-800 rounded-3xl border border-zinc-700";
 
-  // Category toggle
+  const catDiv = document.createElement("div");
+  catDiv.className = "bg-zinc-800 rounded-3xl border border-zinc-700 overflow-hidden";
+
   const btn = document.createElement("button");
-  btn.className = `w-full text-left px-6 py-4 text-2xl font-bold ${cat.color} hover:bg-zinc-700 transition flex justify-between items-center`;
+  btn.className = `w-full text-left px-6 py-5 text-2xl font-bold ${cat.color} hover:bg-zinc-700 transition flex justify-between items-center`;
   btn.innerHTML = `${cat.name} <span class="text-xl">+</span>`;
 
   const servicesDiv = document.createElement("div");
   servicesDiv.className = "slide-down px-6 py-4 space-y-4";
 
-  btn.onclick = () => servicesDiv.classList.toggle("show");
+  btn.onclick = () => {
+    document.querySelectorAll(".slide-down").forEach(el => {
+      if (el !== servicesDiv) el.classList.remove("show");
+    });
+    servicesDiv.classList.toggle("show");
+  };
 
-  // Render each service
   cat.services.forEach(svc => {
     const svcDiv = document.createElement("div");
     svcDiv.className = "service-card bg-zinc-900 p-4 rounded-2xl";
@@ -311,7 +345,6 @@ serviceCategories.forEach(cat => {
         ${svc.prices.map(p => `
           <div class="price-box bg-zinc-800 px-3 py-2 rounded-xl text-center">
             <span class="block">${p.tier}</span>
-            <span class="line-through block">$${p.usd*2} / UGX ${p.ugx*2}</span>
             <span class="font-bold block">$${p.usd} / UGX ${p.ugx}</span>
           </div>
         `).join('')}
@@ -328,7 +361,9 @@ serviceCategories.forEach(cat => {
   catDiv.appendChild(servicesDiv);
   categoriesContainer.appendChild(catDiv);
 });
+
 </script>
+
 
   
      
